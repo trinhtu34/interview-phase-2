@@ -1,0 +1,34 @@
+services:
+  # Backend API
+  backend:
+    build:
+      context: ./Customer_Management_Backend
+      dockerfile: Dockerfile
+    container_name: customer_backend
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5000:8080"
+    volumes:
+      - ./Customer_Management_Backend/Presentation/.env:/app/.env:ro
+    restart: unless-stopped
+
+  # Frontend Web App
+  frontend:
+    build:
+      context: ./Customer_Management_Frontend
+      dockerfile: Dockerfile
+    container_name: customer_frontend
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "3000:8080"
+    volumes:
+      - ./Customer_Management_Frontend/Customer_Management_Frontend/.env:/app/.env:ro
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
