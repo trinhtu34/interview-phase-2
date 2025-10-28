@@ -126,10 +126,10 @@ http://localhost:5000/api
 
 | Method | Endpoint | Description | Request Body |
 |--------|----------|-------------|--------------|
-| 📋 GET    | `/Customer` | Lấy danh sách khách hàng | - |
-| ➕ POST   | `/Customer` | Tạo khách hàng mới | CreateCustomerDTO |
-| ✏️ PUT    | `/Customer/{id}` | Cập nhật khách hàng | UpdateCustomerDTO |
-| 🗑️ DELETE | `/Customer/{id}` | Xóa khách hàng | - |
+| GET    | `/Customer` | Lấy danh sách khách hàng | - |
+| POST   | `/Customer` | Tạo khách hàng mới | CreateCustomerDTO |
+| PUT    | `/Customer/{id}` | Cập nhật khách hàng | UpdateCustomerDTO |
+| DELETE | `/Customer/{id}` | Xóa khách hàng | - |
 
 ## 🔍 Troubleshooting
 
@@ -146,47 +146,3 @@ cat Customer_Management_Backend/Presentation/.env
 # 🔍 Kiểm tra API URL trong frontend
 cat Customer_Management_Frontend/Customer_Management_Frontend/.env
 ```
-
----
-
-## 🛠️ Công nghệ sử dụng
-
-### 🔧 Backend
-- **Framework**: ASP.NET Core 8.0 Web API
-- **Architecture**: Clean Architecture + CQRS
-- **ORM**: Entity Framework Core
-- **Database**: SQL Server
-- **Documentation**: Swagger/OpenAPI
-
-### 🎨 Frontend
-- **Framework**: ASP.NET Core 8.0 MVC
-- **UI**: Bootstrap 5
-- **HTTP Client**: HttpClient with IHttpClientFactory
-
-### 🐳 DevOps
-- **Containerization**: Docker & Docker Compose
-- **Database**: SQL Server (Docker/AWS RDS)
-
----
-
-## 📞 Hỗ trợ
-
-Nếu gặp vấn đề, hãy:
-1. 📋 Kiểm tra logs: `docker compose logs -f`
-2. 📖 Xem documentation: `/swagger` endpoint
-3. 🌐 Kiểm tra network connectivity
-4. ⚙️ Verify environment variables
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
----
-
-<div align="center">
-  <p>Made with ❤️ by <strong>Trinh Tu</strong></p>
-  <p>🚀 <em>Happy Coding!</em> 🚀</p>
-</div>
-
