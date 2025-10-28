@@ -1,10 +1,10 @@
-create database CustomerDB;
+create database customerdb;
 go
 
-use CustomerDB;
+use customerdb;
 go
 
-    create table Customer (
+    create table customer (
         ID int identity(1,1) primary key,
         FullName nvarchar(100) not null,
         BirthDay date null,

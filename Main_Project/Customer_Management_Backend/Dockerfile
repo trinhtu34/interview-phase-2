@@ -28,10 +28,10 @@ COPY --from=publish /app/publish .
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 # Expose port
-EXPOSE 5123
+EXPOSE 8080
 
 # Set environment variables
-ENV ASPNETCORE_URLS=http://+:5123
+ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
 
 ENTRYPOINT ["dotnet", "Presentation.dll"]
