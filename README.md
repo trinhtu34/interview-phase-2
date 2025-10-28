@@ -133,19 +133,60 @@ http://localhost:5000/api
 
 ## 🔍 Troubleshooting
 
-### Một số vấn đề thường gặp
+### ⚠️ Một số vấn đề thường gặp
 
-#### 1. Không kết nối được database
+#### 🗄️ 1. Không kết nối được database
 ```bash
-# Kiểm tra connection string
+# 🔍 Kiểm tra connection string
 cat Customer_Management_Backend/Presentation/.env
-
 ```
 
-#### 2. Frontend không gọi được Backend
-
+#### 🌐 2. Frontend không gọi được Backend
 ```bash
-# Kiểm tra API URL trong frontend
+# 🔍 Kiểm tra API URL trong frontend
 cat Customer_Management_Frontend/Customer_Management_Frontend/.env
 ```
+
+---
+
+## 🛠️ Công nghệ sử dụng
+
+### 🔧 Backend
+- **Framework**: ASP.NET Core 8.0 Web API
+- **Architecture**: Clean Architecture + CQRS
+- **ORM**: Entity Framework Core
+- **Database**: SQL Server
+- **Documentation**: Swagger/OpenAPI
+
+### 🎨 Frontend
+- **Framework**: ASP.NET Core 8.0 MVC
+- **UI**: Bootstrap 5
+- **HTTP Client**: HttpClient with IHttpClientFactory
+
+### 🐳 DevOps
+- **Containerization**: Docker & Docker Compose
+- **Database**: SQL Server (Docker/AWS RDS)
+
+---
+
+## 📞 Hỗ trợ
+
+Nếu gặp vấn đề, hãy:
+1. 📋 Kiểm tra logs: `docker compose logs -f`
+2. 📖 Xem documentation: `/swagger` endpoint
+3. 🌐 Kiểm tra network connectivity
+4. ⚙️ Verify environment variables
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <strong>Trinh Tu</strong></p>
+  <p>🚀 <em>Happy Coding!</em> 🚀</p>
+</div>
 
