@@ -1,8 +1,8 @@
-# Customer Management System
+# 👥 Customer Management System
 
 Hệ thống quản lý khách hàng được xây dựng với Clean Architecture và CQRS pattern, sử dụng ASP.NET Core 8.0.
 
-## Tổng quan
+## 🎯 Tổng quan
 
 Hệ thống quản lý khách hàng cung cấp các chức năng CRUD cơ bản:
 - ✅ Xem danh sách khách hàng
@@ -10,11 +10,11 @@ Hệ thống quản lý khách hàng cung cấp các chức năng CRUD cơ bản
 - ✅ Cập nhật thông tin khách hàng
 - ✅ Xóa khách hàng
 
-## Link demo sản phẩm 
+## 🌐 Link demo sản phẩm 
 
-Link demo tại : http://54.251.211.116/
+🔗 Link demo tại : http://54.251.211.116/
 
-## Cây thư mục
+## 📁 Cây thư mục
 
 ```
 interview-phase-2/
@@ -57,72 +57,79 @@ interview-phase-2/
 
 ## 🚀 Cài đặt và chạy thử ở local
 
-### Yêu cầu hệ thống
-- .NET 8.0 SDK
-- Docker & Docker Compose
-- SQL Server ở local hoặc có thể dùng SQL Server chạy trên Docker hoặc AWS RDS 
+### 📋 Yêu cầu hệ thống
+- 🔧 .NET 8.0 SDK
+- 🐳 Docker & Docker Compose
+- 🗄️ SQL Server ở local hoặc có thể dùng SQL Server chạy trên Docker hoặc AWS RDS 
 
-### Chạy với Docker Compose
+### 🐳 Chạy với Docker Compose
 
-1. **Clone repository**
+1. **📥 Clone repository**
    ```bash
    git clone https://github.com/trinhtu34/interview-phase-2.git
    cd interview-phase-2/Main_Project
    ```
-2. **Khởi tạo SQL Server với Docker compose**
-- Tạo file .env nằm tại vị trí : interview-phase-2/Setup-db-to-running-on-local
-- Nội dung : 
-```sql
+2. **🗄️ Khởi tạo SQL Server với Docker compose**
+- 📝 Tạo file .env nằm tại vị trí : `interview-phase-2/Setup-db-to-running-on-local`
+- 📄 Nội dung : 
+```bash
 ACCEPT_EULA=Y
 SA_PASSWORD=Password123!
 MSSQL_PID=Express
 MSSQL_PORT=1433
 ```
-3. **Cấu hình environment variables**
 
-Tạo .env cho Backend : 
-- Vị trí nằm tại : interview-phase-2/Main_Project/Customer_Management_Backend/Presentation
-- Nội dung : ```DefaultConnection=Server=localhost;Database=customerdb;User Id=sa;Password=Password123!;TrustServerCertificate=true```
+3. **⚙️ Cấu hình environment variables**
 
-Tạo .env cho Frontend :
-- Vị trí nằm tại : interview-phase-2/Main_Project/Customer_Management_Frontend/Customer_Management_Frontend
-- Nội dung : ```API_BASE_URL=http://backend:8080/api```
-    - 
-3. **Build và chạy**
+🔧 **Tạo .env cho Backend** : 
+- 📍 Vị trí nằm tại : `interview-phase-2/Main_Project/Customer_Management_Backend/Presentation`
+- 📄 Nội dung : 
+```bash
+DefaultConnection=Server=localhost;Database=customerdb;User Id=sa;Password=Password123!;TrustServerCertificate=true
+```
 
-Đảm bảo vị trí của bạn nằm tại : interview-phase-2/Main_Project
+🎨 **Tạo .env cho Frontend** :
+- 📍 Vị trí nằm tại : `interview-phase-2/Main_Project/Customer_Management_Frontend/Customer_Management_Frontend`
+- 📄 Nội dung : 
+```bash
+API_BASE_URL=http://backend:8080/api
+```
+
+4. **🔨 Build và chạy**
+
+📍 Đảm bảo vị trí của bạn nằm tại : `interview-phase-2/Main_Project`
 
    ```bash
-   # Build images
+   # 🔨 Build images
    cd Customer_Management_Backend
    docker build -t crm-backend-img -f Dockerfile .
    cd ..
    cd Customer_Management_Frontend
    docker build -t crm-frontend-img -f Dockerfile .
-   cd..
-   # Chạy containers
+   cd ..
+   # 🚀 Chạy containers
    docker compose up -d
    ```
 
-4. **Truy cập ứng dụng**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000/api/Customer
+5. **🌐 Truy cập ứng dụng**
+   - 🎨 Frontend: http://localhost:3000
+   - 🔧 Backend API: http://localhost:5000/api/Customer
 
 ## 📚 API Documentation
 
-### Base URL
+### 🌐 Base URL
 ```
 http://localhost:5000/api
 ```
 
-### Endpoints
+### 🔗 Endpoints
 
 | Method | Endpoint | Description | Request Body |
 |--------|----------|-------------|--------------|
-| GET    | `/Customer` | Lấy danh sách khách hàng | - |
-| POST   | `/Customer` | Tạo khách hàng mới | CreateCustomerDTO |
-| PUT    | `/Customer/{id}` | Cập nhật khách hàng | UpdateCustomerDTO |
-| DELETE | `/Customer/{id}` | Xóa khách hàng | - |
+| 📋 GET    | `/Customer` | Lấy danh sách khách hàng | - |
+| ➕ POST   | `/Customer` | Tạo khách hàng mới | CreateCustomerDTO |
+| ✏️ PUT    | `/Customer/{id}` | Cập nhật khách hàng | UpdateCustomerDTO |
+| 🗑️ DELETE | `/Customer/{id}` | Xóa khách hàng | - |
 
 ## 🔍 Troubleshooting
 
